@@ -120,4 +120,3 @@ add_action('tencent_captcha_after_failed', function($error_code) {
 
 - 腾讯云官方支持：https://cloud.tencent.com/online-service
 - WordPress 支持论坛：[插件讨论区](https://wordpress.org/support/plugin/your-plugin-slug)
-- 紧急联系：security@yourdomain.com
