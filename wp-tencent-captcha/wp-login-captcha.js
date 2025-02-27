@@ -11,7 +11,7 @@ function callback(res) {
         ipt.select();
         document.execCommand("Copy");
         document.body.removeChild(ipt);
-        alert('1. 返回结果（randstr、ticket）已复制到剪切板，ctrl+v 查看。 2. 打开浏览器控制台，查看完整返回结果。');
+        alert('验证成功。');
 
         // 将验证码结果添加到登录表单中
         var form = document.getElementById('loginform');
