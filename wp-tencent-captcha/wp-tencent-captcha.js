@@ -11,7 +11,7 @@ function callback(res) {
         ipt.select();
         document.execCommand("Copy");
         document.body.removeChild(ipt);
-        alert('验证成功。');
+        //alert('验证成功');
 
         // 将验证码结果添加到登录表单中
         var form = document.getElementById('loginform');
@@ -36,7 +36,7 @@ function callback(res) {
 
 // 定义验证码js加载错误处理函数
 function loadErrorCallback() {
-    var appid = wp_login_captcha_params.captcha_app_id;
+    var appid = wp_tencent_captcha_params.captcha_app_id;
     // 生成容灾票据或自行做其它处理
     var ticket = 'terror_1001_' + appid + '_' + Math.floor(new Date().getTime() / 1000);
     callback({
@@ -55,7 +55,7 @@ window.onload = function () {
         loginButton.onclick = function () {
             try {
                 // 生成一个验证码对象
-                var captcha = new TencentCaptcha(wp_login_captcha_params.captcha_app_id, callback, {});
+                var captcha = new TencentCaptcha(wp_tencent_captcha_params.captcha_app_id, callback, {});
                 // 调用方法，显示验证码
                 captcha.show();
             } catch (error) {
